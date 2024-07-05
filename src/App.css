@@ -1,5 +1,9 @@
 @import url('https://cdn.syncfusion.com/ej2/material.css');
 
+/* .bg-hero-pattern {
+  background-image: url('/src/data/welcome.jpg');
+} */
+
 .sidebar {
   box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
 }
