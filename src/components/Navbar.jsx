@@ -28,27 +28,33 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsclicked, screenSize, setScreenSize } =
-    useStateContext()
+  const {
+    activeMenu,
+    setActiveMenu,
+    handleClick,
+    isClicked,
+    setIsclicked,
+    screenSize,
+    setScreenSize,
+  } = useStateContext()
 
-    useEffect(() => {
-    const handleResize = () => setScreenSize(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth)
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
 
-    handleResize();
+    handleResize()
 
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
-  useEffect(() =>{
-    if(screenSize <=900)
-      {
-        setActiveMenu(false);
-      }else{
-        setActiveMenu(true)
-      }
-      } , [screenSize]);
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false)
+    } else {
+      setActiveMenu(true)
+    }
+  }, [screenSize])
 
   return (
     <div className=" flex justify-between p-2 md:mx-6 relative">
@@ -96,7 +102,7 @@ const Navbar = () => {
             <p>
               <span className="text-gray-400 text-14">Hi,</span>{' '}
               <span className="text-gray-400 font-bold ml-1 text-14">
-                Michael
+                Pranjali
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
